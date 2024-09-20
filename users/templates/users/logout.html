@@ -1,0 +1,16 @@
+{% extends 'blog/base.html' %}
+{% if title %}
+<title> Django Blog - {{title}}</title>
+{% else %}
+<title>Django Blog </title>
+{% endif %}
+
+{% block content %}
+    <h2>You have been logged out</h2>
+    <div class="border-top pt-3">
+        <small class="text-muted">
+            <a class="ml-2" href="{% url 'login' %}">Log In Again</a>
+        </small>
+    </div>
+    
+{% endblock content %}
